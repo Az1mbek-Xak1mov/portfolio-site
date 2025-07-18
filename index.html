@@ -1,82 +1,198 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Mail, Github, Linkedin, Send } from "lucide-react"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azimbek Hakimov | Portfolio</title>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@0.244.0/dist/umd/lucide.js"></script>
+  <style>
+    /* Reset & Global */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: #f9fafb;
+      font-family: 'Inter', sans-serif;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: underline;
+      transition: color 0.2s ease-in-out;
+    }
+    a:hover { color: #1e40af; }
+    h1,h2,h3 { color: #111827; }
 
-export default function Portfolio() {
-  return (
-    <div className="max-w-4xl mx-auto p-6 space-y-6">
-      <div className="text-center space-y-2">
-        <h1 className="text-4xl font-bold">Azimbek Hakimov</h1>
-        <p className="text-lg text-gray-600">Python Backend Developer based in Tashkent, Uzbekistan</p>
-        <div className="flex justify-center gap-4 pt-2">
-          <a href="https://github.com/Az1mbek-Xak1mov" target="_blank"><Github /></a>
-          <a href="https://www.linkedin.com/in/azimbek-hakimov-784b2528a/" target="_blank"><Linkedin /></a>
-          <a href="mailto:azimbekhakimov2@gmail.com" target="_blank"><Mail /></a>
-          <a href="https://t.me/Azimbek_Hakimov" target="_blank"><Send /></a>
+    /* Layout */
+    header { background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+    .nav-container { max-width: 48rem; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem; }
+    nav ul { display: flex; gap: 1rem; list-style: none; }
+
+    .main { max-width: 48rem; margin: 2rem auto; padding: 0 1rem; display: flex; flex-direction: column; gap: 2rem; }
+    section { padding: 1rem 0; }
+
+    /* Cards */
+    .card { background: white; border-radius: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); overflow: hidden; }
+    .card-content { padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem; }
+
+    /* Header Section */
+    .hero { text-align: center; }
+    .hero h1 { font-size: 2.5rem; font-weight: 700; }
+    .hero p { margin-top: 0.5rem; font-size: 1.125rem; color: #6b7280; }
+    .social {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.25rem;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 0.75rem;
+      color: #374151 !important;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .social-link:hover {
+      background: #2563eb;
+      color: white !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+    }
+
+    /* Project Link Overrides */
+    .card-content a { color: #2563eb; text-decoration: underline; }
+
+    /* Lists */
+    ul { list-style: disc inside; }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      nav ul { flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div><strong>Azimbek Hakimov</strong></div>
+      <nav>
+        <ul>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Hero / Profile -->
+    <section id="profile" class="hero card">
+      <div class="card-content">
+        <h1>Azimbek Hakimov</h1>
+        <p class="subtitle">Python Backend Developer</p>
+        <p>Building scalable web applications in Tashkent, Uzbekistan</p>
+        <div class="social">
+          <a class="social-link" href="https://github.com/Az1mbek-Xak1mov" target="_blank">
+            <i data-lucide="github"></i> GitHub
+          </a>
+          <a class="social-link" href="https://linkedin.com/in/azimbek-hakimov-784b2528a/" target="_blank">
+            <i data-lucide="linkedin"></i> LinkedIn
+          </a>
+          <a class="social-link" href="mailto:azimbekhakimov2@gmail.com">
+            <i data-lucide="mail"></i> Email
+          </a>
+          <a class="social-link" href="https://t.me/Azimbek_Hakimov" target="_blank">
+            <i data-lucide="send"></i> Telegram
+          </a>
         </div>
       </div>
+    </section>
 
-      <Card>
-        <CardContent className="p-4 space-y-2">
-          <h2 className="text-2xl font-semibold">About Me</h2>
-          <p>I am a backend-focused Python developer passionate about building scalable web applications and automation tools using Django and REST APIs. I enjoy solving real-world problems with clean, maintainable code.</p>
-        </CardContent>
-      </Card>
+    <!-- Skills -->
+    <section id="skills" class="card">
+      <div class="card-content">
+        <h2>Skills</h2>
+        <ul>
+          <li><strong>Languages:</strong> Python, PostgreSQL, HTML & CSS (basic)</li>
+          <li><strong>Frameworks:</strong> Django, Django REST Framework</li>
+          <li><strong>Tools:</strong> Docker, BeautifulSoup, PyTest, Linux</li>
+          <li><strong>Databases:</strong> PostgreSQL, SQLite</li>
+          <li><strong>Languages Spoken:</strong> Uzbek (Native), Russian (C1), English (B2)</li>
+        </ul>
+      </div>
+    </section>
 
-      <Card>
-        <CardContent className="p-4 space-y-2">
-          <h2 className="text-2xl font-semibold">Skills</h2>
-          <ul className="list-disc pl-5">
-            <li><b>Languages:</b> Python, PostgreSQL, HTML & CSS (basic)</li>
-            <li><b>Frameworks:</b> Django, Django REST Framework</li>
-            <li><b>Tools:</b> Docker, Linux, BeautifulSoup, PyTest</li>
-            <li><b>Languages Spoken:</b> Uzbek (Native), Russian (C1), English (B2)</li>
-          </ul>
-        </CardContent>
-      </Card>
+    <!-- Projects -->
+    <section id="projects" class="card">
+      <div class="card-content">
+        <h2>Projects</h2>
+        <div>
+          <h3>Alijahon Online Market</h3>
+          <p>An e‑commerce platform with cart, order, and admin product management. (Django, PostgreSQL, Celery, Docker)</p>
+          <a href="https://github.com/Az1mbek-Xak1mov/Alijahon" target="_blank">View on GitHub</a>
+        </div>
+        <div>
+          <h3>Telegram Bot for Developer-Client Matching</h3>
+          <p>FSM-based bot connecting developers & clients. (aiogram, PostgreSQL)</p>
+          <a href="https://github.com/Az1mbek-Xak1mov/Kwork-Bot" target="_blank">View on GitHub</a>
+        </div>
+        <div>
+          <h3>Apartment Renting Bot with Scraping</h3>
+          <p>Scrapes OLX for rental listings, delivers results. (Telegram, Web Scraping)</p>
+          <a href="https://github.com/Az1mbek-Xak1mov/RentingApart_With_scrapping" target="_blank">View on GitHub</a>
+        </div>
+        <div>
+          <h3>Group Message Counter Bot</h3>
+          <p>Counts & ranks Telegram group message activity. (aiogram)</p>
+          <a href="https://github.com/Az1mbek-Xak1mov/MessageCounter" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+    </section>
 
-      <Card>
-        <CardContent className="p-4 space-y-4">
-          <h2 className="text-2xl font-semibold">Projects</h2>
-          <div>
-            <h3 className="text-lg font-bold">Alijahon Online Market</h3>
-            <p>An e-commerce platform built with Django, PostgreSQL, Celery, and Docker.</p>
-            <a className="text-blue-600 underline" href="https://github.com/Az1mbek-Xak1mov/Alijahon" target="_blank">GitHub Repo</a>
-          </div>
-          <div>
-            <h3 className="text-lg font-bold">Telegram Bot for Developer-Client Matching</h3>
-            <p>Built using aiogram, PostgreSQL, and a custom ORM.</p>
-            <a className="text-blue-600 underline" href="https://github.com/Az1mbek-Xak1mov/Kwork-Bot" target="_blank">GitHub Repo</a>
-          </div>
-          <div>
-            <h3 className="text-lg font-bold">Apartment Renting Bot with Scraping</h3>
-            <p>Telegram-integrated scraper for rental listings from OLX.</p>
-            <a className="text-blue-600 underline" href="https://github.com/Az1mbek-Xak1mov/RentingApart_With_scrapping" target="_blank">GitHub Repo</a>
-          </div>
-          <div>
-            <h3 className="text-lg font-bold">Group Message Counter Bot</h3>
-            <p>Tracks and ranks messages in Telegram groups using aiogram.</p>
-            <a className="text-blue-600 underline" href="https://github.com/Az1mbek-Xak1mov/MessageCounter" target="_blank">GitHub Repo</a>
-          </div>
-        </CardContent>
-      </Card>
+    <!-- Experience -->
+    <section id="experience" class="card">
+      <div class="card-content">
+        <h2>Experience</h2>
+        <ul>
+          <li><strong>Manager</strong> — Turtopar Tour Firm, Uzbekistan</li>
+        </ul>
+      </div>
+    </section>
 
-      <Card>
-        <CardContent className="p-4">
-          <h2 className="text-2xl font-semibold">Experience</h2>
-          <ul className="list-disc pl-5">
-            <li><b>Freelancer at Kwork</b> (2023 - Present) – Delivered 10+ high-rated projects.</li>
-            <li><b>Manager at Turtopar Tour Firm</b> – Organized and managed tours in Uzbekistan.</li>
-          </ul>
-        </CardContent>
-      </Card>
+    <!-- Education -->
+    <section id="education" class="card">
+      <div class="card-content">
+        <h2>Education</h2>
+        <p>BSc in Computer Science, Westminster International University in Tashkent (2023 – 2027)</p>
+      </div>
+    </section>
 
-      <Card>
-        <CardContent className="p-4">
-          <h2 className="text-2xl font-semibold">Education</h2>
-          <p>BSc in Computer Science – Westminster International University in Tashkent (2023 - 2027)</p>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
+    <!-- Contact -->
+    <section id="contact" class="card">
+      <div class="card-content">
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:azimbekhakimov2@gmail.com">azimbekhakimov2@gmail.com</a></p>
+        <p><strong>Telegram:</strong> <a href="https://t.me/Azimbek_Hakimov" target="_blank">@Azimbek_Hakimov</a></p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    lucide.replace();
+  </script>
+</body>
+</html>
