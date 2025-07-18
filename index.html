@@ -1,0 +1,82 @@
+import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Mail, Github, Linkedin, Send } from "lucide-react"
+
+export default function Portfolio() {
+  return (
+    <div className="max-w-4xl mx-auto p-6 space-y-6">
+      <div className="text-center space-y-2">
+        <h1 className="text-4xl font-bold">Azimbek Hakimov</h1>
+        <p className="text-lg text-gray-600">Python Backend Developer based in Tashkent, Uzbekistan</p>
+        <div className="flex justify-center gap-4 pt-2">
+          <a href="https://github.com/Az1mbek-Xak1mov" target="_blank"><Github /></a>
+          <a href="https://www.linkedin.com/in/azimbek-hakimov-784b2528a/" target="_blank"><Linkedin /></a>
+          <a href="mailto:azimbekhakimov2@gmail.com" target="_blank"><Mail /></a>
+          <a href="https://t.me/Azimbek_Hakimov" target="_blank"><Send /></a>
+        </div>
+      </div>
+
+      <Card>
+        <CardContent className="p-4 space-y-2">
+          <h2 className="text-2xl font-semibold">About Me</h2>
+          <p>I am a backend-focused Python developer passionate about building scalable web applications and automation tools using Django and REST APIs. I enjoy solving real-world problems with clean, maintainable code.</p>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardContent className="p-4 space-y-2">
+          <h2 className="text-2xl font-semibold">Skills</h2>
+          <ul className="list-disc pl-5">
+            <li><b>Languages:</b> Python, PostgreSQL, HTML & CSS (basic)</li>
+            <li><b>Frameworks:</b> Django, Django REST Framework</li>
+            <li><b>Tools:</b> Docker, Linux, BeautifulSoup, PyTest</li>
+            <li><b>Languages Spoken:</b> Uzbek (Native), Russian (C1), English (B2)</li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardContent className="p-4 space-y-4">
+          <h2 className="text-2xl font-semibold">Projects</h2>
+          <div>
+            <h3 className="text-lg font-bold">Alijahon Online Market</h3>
+            <p>An e-commerce platform built with Django, PostgreSQL, Celery, and Docker.</p>
+            <a className="text-blue-600 underline" href="https://github.com/Az1mbek-Xak1mov/Alijahon" target="_blank">GitHub Repo</a>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold">Telegram Bot for Developer-Client Matching</h3>
+            <p>Built using aiogram, PostgreSQL, and a custom ORM.</p>
+            <a className="text-blue-600 underline" href="https://github.com/Az1mbek-Xak1mov/Kwork-Bot" target="_blank">GitHub Repo</a>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold">Apartment Renting Bot with Scraping</h3>
+            <p>Telegram-integrated scraper for rental listings from OLX.</p>
+            <a className="text-blue-600 underline" href="https://github.com/Az1mbek-Xak1mov/RentingApart_With_scrapping" target="_blank">GitHub Repo</a>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold">Group Message Counter Bot</h3>
+            <p>Tracks and ranks messages in Telegram groups using aiogram.</p>
+            <a className="text-blue-600 underline" href="https://github.com/Az1mbek-Xak1mov/MessageCounter" target="_blank">GitHub Repo</a>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardContent className="p-4">
+          <h2 className="text-2xl font-semibold">Experience</h2>
+          <ul className="list-disc pl-5">
+            <li><b>Freelancer at Kwork</b> (2023 - Present) – Delivered 10+ high-rated projects.</li>
+            <li><b>Manager at Turtopar Tour Firm</b> – Organized and managed tours in Uzbekistan.</li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardContent className="p-4">
+          <h2 className="text-2xl font-semibold">Education</h2>
+          <p>BSc in Computer Science – Westminster International University in Tashkent (2023 - 2027)</p>
+        </CardContent>
+      </Card>
+    </div>
+  )
+}
