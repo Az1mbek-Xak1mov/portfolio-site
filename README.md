@@ -1,54 +1,65 @@
-# 🧑‍💻 Azimbek Hakimov – Developer Portfolio Website
+# Azimbek Hakimov Portfolio Website
 
-This is the source code for my personal portfolio website.
-It is built using **React + Tailwind CSS**, deployed on GitHub Pages.
-
-🔗 **Live Site:** [https://az1mbek-xak1mov.github.io/portfolio-site](https://az1mbek-xak1mov.github.io/portfolio-site)
-
-## 📝 About Me
-I'm a backend-focused Python developer from Tashkent, Uzbekistan. I specialize in building web apps, Telegram bots, and automation tools using Django, REST APIs, PostgreSQL, Docker, and Linux.
+This repository contains the source code for my personal portfolio website, built with plain HTML, CSS, and the Lucide icon library. It showcases my profile, skills, projects, experience, education, and contact information in a responsive, single-page layout.
 
 ---
 
-## 💡 Tech Stack
-- React & Tailwind CSS
-- Shadcn UI components
-- Hosted on GitHub Pages
+## 🚀 Features
 
-## 📦 How to Run Locally
-1. Clone this repo:
-   ```bash
-   git clone https://github.com/Az1mbek-Xak1mov/portfolio-site.git
-   cd portfolio-site
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the dev server:
-   ```bash
-   npm run dev
-   ```
+* **Responsive design**: Adapts to mobile and desktop screens.
+* **Sticky navigation**: Smooth scrolling to sections.
+* **Cards layout**: Clean presentation of content.
+* **Lucide icons**: Crisp SVG icons for social links.
+* **Modern CSS**: Utilizes CSS variables, flexbox, and transitions.
 
-## 🚀 Deploy (for GitHub Pages)
-```bash
-npm run build
+---
+
+## 🛠️ Technologies
+
+* **HTML5**
+* **CSS3** (Flexbox, Media Queries)
+* **JavaScript**: Lucide icon initialization
+* **Lucide Icons**: `<script>`-based SVG replacement
+
+---
+
+## 📂 Repository Structure
+
 ```
-Then push the contents of `dist/` or your built output to the `gh-pages` branch, or configure GitHub Pages to serve from the root of `/docs`.
+├── index.html   # Main portfolio page
+└── README.md    # This documentation file
+```
 
 ---
 
-## 🛠 Projects Featured
-- [Alijahon Online Market](https://github.com/Az1mbek-Xak1mov/Alijahon)
-- [Telegram Bot for Developer-Client Matching](https://github.com/Az1mbek-Xak1mov/Kwork-Bot)
-- [Apartment Renting Bot with Scraping](https://github.com/Az1mbek-Xak1mov/RentingApart_With_scrapping)
-- [Group Message Counter](https://github.com/Az1mbek-Xak1mov/MessageCounter)
+## 🔧 Installation
 
-## 📫 Contact
-- 📧 Email: azimbekhakimov2@gmail.com
-- 🧑‍💼 LinkedIn: [Azimbek Hakimov](https://www.linkedin.com/in/azimbek-hakimov-784b2528a/)
-- 💬 Telegram: [@Azimbek_Hakimov](https://t.me/Azimbek_Hakimov)
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Az1mbek-Xak1mov/portfolio-website.git
+   cd portfolio-website
+   ```
+
+2. Open `index.html` in your favorite browser.
 
 ---
 
-> Designed and coded by Azimbek Hakimov ✨
+## 🚦 Usage
+
+* Click on navigation links to jump to sections.
+* Click on social or project links to visit external pages.
+
+---
+
+## ✨ Customization
+
+* **Colors & typography**: Modify the CSS variables and `<style>` block in `index.html`.
+* **Content**: Edit the section headings and text directly in the HTML.
+* **Icons**: Change `<i data-lucide>` attributes to use any Lucide icon.
+
+---
+
+## 📜 License
+
+MIT © Azimbek Hakimov
