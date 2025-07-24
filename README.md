@@ -60,6 +60,3 @@ This repository contains the source code for my personal portfolio website, buil
 
 ---
 
-## 📜 License
-
-MIT © Azimbek Hakimov
